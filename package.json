@@ -1,0 +1,16 @@
+{
+  "name": "fishing-time",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "copyfiles --flat dist/assets/main.js webflow",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.1",
+    "vite-plugin-mkcert": "^1.17.6"
+  }
+}
