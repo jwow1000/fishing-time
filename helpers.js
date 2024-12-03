@@ -25,3 +25,18 @@ export function adjustVolume(video, targetVolume, duration = 500, ramping) {
       }
   }, stepTime);
 }
+
+// play that listens to load state
+export function playVideo(video) {
+  if (video.readyState >= 3) { // 3 means the video is loaded enough to play
+    video.play().catch(error => {
+      console.error("Error playing video:", error);
+    });
+  } else {
+    video.addEventListener("canplay", () => {
+      video.play().catch(error => {
+        console.error("Error playing video:", error);
+      });
+    }, { once: true }); // Ensures the event listener is triggered only once
+  }
+}
