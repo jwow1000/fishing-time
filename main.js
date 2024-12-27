@@ -1,8 +1,5 @@
-import Swiper from "swiper";
-import "swiper/css";
 // import helper functions
 import { adjustVolume, playVideo } from "./helpers.js";
-import  { captureScroll } from "./getScroll.js";
 
 // make sure webflow content is loaded to DOM
 window.Webflow.push(() => {
@@ -32,12 +29,12 @@ window.Webflow.push(() => {
             if (!volRamping) {
               if (vid.muted) {
                 adjustVolume(vid, 1, 500, volRamping);
-                onImg.style.opacity = 1;
+                onImg.style.opacity = 0.61;
                 muteImg.style.opacity = 0;
               } else {
                 adjustVolume(vid, 0, 500, volRamping);
                 onImg.style.opacity = 0;
-                muteImg.style.opacity = 1;
+                muteImg.style.opacity = 0.61;
               }
             }
           }

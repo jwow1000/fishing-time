@@ -27,7 +27,7 @@ export function adjustVolume(video, targetVolume, duration = 500, ramping) {
 }
 
 // play that listens to load state
-export function playVideo(video) {
+export function playVideo( video ) {
   if (video.readyState >= 3) { // 3 means the video is loaded enough to play
     video.play().catch(error => {
       console.error("Error playing video:", error);
