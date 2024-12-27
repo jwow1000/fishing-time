@@ -4,14 +4,6 @@ import { adjustVolume, playVideo } from "./helpers.js";
 // make sure webflow content is loaded to DOM
 window.Webflow.push(() => {
 
-  // select container from webflow
-  const container = document.querySelector(".swiper-wrapper");
-  
-  // capture scroll up or down
-  container.addEventListener("scroll", function() {
-    console.log("check scroll: ", container.scrollTop)
-  });
-  
   // play videos in view
   const movies = document.querySelectorAll(".video-loop-container");
 
